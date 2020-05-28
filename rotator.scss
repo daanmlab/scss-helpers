@@ -1,0 +1,5 @@
+@for $x from 1 through 7 {
+  .rot-#{$x * 45} {
+    transform: rotateZ(#{$x * 45}deg);
+  }
+}

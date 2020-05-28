@@ -1,0 +1,13 @@
+$displayTypes: ('in' : inline, 'bl' : block, 'fl' : flex, 'in-bl' : inline-block, 'in-fl' : inline-flex);
+
+@each $short, $full in $displayTypes {
+    .has-display-#{$short} {
+        display: $full;
+    }
+}
+
+@each $short, $full in $displayTypes {
+    .has-display-#{$short}-i {
+        display: $full !important;
+    }
+}

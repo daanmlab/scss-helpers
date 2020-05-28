@@ -1,0 +1,37 @@
+$overflowTypes: ('vis' : visible, 'scr' : scroll, 'hid' : hidden);
+
+@each $short, $full in $overflowTypes {
+  .has-overflow-#{$short} {
+    overflow: $full;
+  }
+}
+
+@each $short, $full in $overflowTypes {
+  .has-overflow-#{$short}-i {
+    overflow: $full !important;
+  }
+}
+
+@each $short, $full in $overflowTypes {
+  .has-overflow-x-#{$short} {
+    overflow-x: $full;
+  }
+}
+
+@each $short, $full in $overflowTypes {
+  .has-overflow-x-#{$short}-i {
+    overflow-x: $full !important;
+  }
+}
+
+@each $short, $full in $overflowTypes {
+  .has-overflow-y-#{$short} {
+    overflow-y: $full;
+  }
+}
+
+@each $short, $full in $overflowTypes {
+  .has-overflow-y-#{$short}-i {
+    overflow-y: $full !important;
+  }
+}
