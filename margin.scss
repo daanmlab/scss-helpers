@@ -1,67 +1,21 @@
-@for $x from 1 through 11 {
-  $i: $x - 1;
+$positions: ( 't': '-top', 'l':'-left', 'b': '-bottom', 'r':'-right', '-': '' );
 
-  .mt-#{$i} {
-    margin-top: #{$i}em;
+@each $pos, $position in $positions {
+  @for $x from 1 through 11 {
+    $i: $x - 1;
+    .m#{$pos}-#{$i} {
+      margin#{$position}: #{$i}em;
+    }
+    .m#{$pos}-#{$i}-i {
+      margin#{$position}: #{$i}em !important;
+    }
   }
-  .mb-#{$i} {
-    margin-bottom: #{$i}em;
-  }
-  .ml-#{$i} {
-    margin-left: #{$i}em;
-  }
-  .mr-#{$i} {
-    margin-right: #{$i}em;
-  }
-  .m--#{$i} {
-    margin: #{$i}em;
-  }
-  .mt-#{$i}-i {
-    margin-top: #{$i}em !important;
-  }
-  .mb-#{$i}-i {
-    margin-bottom: #{$i}em !important;
-  }
-  .ml-#{$i}-i {
-    margin-left: #{$i}em !important;
-  }
-  .mr-#{$i}-i {
-    margin-right: #{$i}em !important;
-  }
-  .m--#{$i}-i {
-    margin: #{$i}em !important;
-  }
-}
 
-.mt-half {
-  margin-top: 0.5em;
-}
-.mb-half {
-  margin-bottom: 0.5em;
-}
-.ml-half {
-  margin-left: 0.5em;
-}
-.mr-half {
-  margin-right: 0.5em;
-}
-.m--half {
-  margin: 0.5em;
-}
-
-
-.mt-half-i {
-  margin-top: 0.5em !important;
-}
-.mb-half-i {
-  margin-bottom: 0.5em !important;
-}
-.ml-half-i {
-  margin-left: 0.5em !important;
-}
-.mr-half-i {
-  margin-right: 0.5em !important;
-}
-.m--half-i {
-  margin: 0.5em !important;
+  .m#{$pos}-half {
+    margin#{$position}: .5em;
+  }
+  .m#{$pos}-half-i {
+    margin#{$position}: .5em !important;
+  }
+  
 }

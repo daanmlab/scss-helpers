@@ -1,67 +1,21 @@
-@for $x from 1 through 11 {
-  $i: $x - 1;
+$positions: ( 't': '-top', 'l':'-left', 'b': '-bottom', 'r':'-right', '-': '' );
 
-  .pt-#{$i} {
-    padding-top: #{$i}em;
+@each $pos, $position in $positions {
+  @for $x from 1 through 11 {
+    $i: $x - 1;
+    .p#{$pos}-#{$i} {
+      padding#{$position}: #{$i}em;
+    }
+    .p#{$pos}-#{$i}-i {
+      padding#{$position}: #{$i}em !important;
+    }
   }
-  .pb-#{$i} {
-    padding-bottom: #{$i}em;
-  }
-  .pl-#{$i} {
-    padding-left: #{$i}em;
-  }
-  .pr-#{$i} {
-    padding-right: #{$i}em;
-  }
-  .p--#{$i} {
-    padding: #{$i}em;
-  }
-  .pt-#{$i}-i {
-    padding-top: #{$i}em !important;
-  }
-  .pb-#{$i}-i {
-    padding-bottom: #{$i}em !important;
-  }
-  .pl-#{$i}-i {
-    padding-left: #{$i}em !important;
-  }
-  .pr-#{$i}-i {
-    padding-right: #{$i}em !important;
-  }
-  .p--#{$i}-i {
-    padding: #{$i}em !important;
-  }
-}
 
-.pt-half {
-  padding-top: 0.5em;
-}
-.pb-half {
-  padding-bottom: 0.5em;
-}
-.pl-half {
-  padding-left: 0.5em;
-}
-.pr-half {
-  padding-right: 0.5em;
-}
-.p--half {
-  padding: 0.5em;
-}
-
-
-.pt-half-i {
-  padding-top: 0.5em !important;
-}
-.pb-half-i {
-  padding-bottom: 0.5em !important;
-}
-.pl-half-i {
-  padding-left: 0.5em !important;
-}
-.pr-half-i {
-  padding-right: 0.5em !important;
-}
-.p--half-i {
-  padding: 0.5em !important;
+  .p#{$pos}-half {
+    padding#{$position}: .5em;
+  }
+  .p#{$pos}-half-i {
+    padding#{$position}: .5em !important;
+  }
+  
 }
